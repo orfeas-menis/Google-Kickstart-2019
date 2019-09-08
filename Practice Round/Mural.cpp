@@ -2,7 +2,7 @@
 using namespace std;
 int main() 
 {
-    long long int N,sum,count,max,limit,temp;
+    long long int N,sum,count,max,limit,temp,j;
     int T,i;
     cin >> T;
     for (i=1; i<=T; i++){
@@ -16,7 +16,7 @@ int main()
         else{
             limit = N/2 + 1;
         }
-        int Arr[N],j;
+        int Arr[N];
         cin >> temp;
 
         for (j=0; j<N; j++){
