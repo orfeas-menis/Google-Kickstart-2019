@@ -2,7 +2,7 @@
 using namespace std;
 int main() 
 {
-    long long int N,sum,count,max,limit,temp,j;
+    long long int N,sum,count,max,limit,j;
     int T,i;
     cin >> T;
     for (i=1; i<=T; i++){
@@ -17,11 +17,17 @@ int main()
             limit = N/2 + 1;
         }
         int Arr[N];
-        cin >> temp;
-
+        char a;
+        /*
+           There is one input with N = 5000000
+           so it is impossible to read the number
+           that consists of N digits. 
+           Solution: read the input digit by digit.
+        */
+        
         for (j=0; j<N; j++){
-            Arr[j] = temp % 10;
-            temp = temp / 10;
+            cin >> a;
+            Arr[j] = int(a) - 48; //Convert ASCII to int
             if (count<limit){
                 count++;
                 sum = sum + Arr[j];
